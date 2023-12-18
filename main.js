@@ -132,10 +132,18 @@ function isValidPassword(str) {
 
 
 
-function onlyPunchy(str) {
+function onlyPunchy(arr) {
+let punchy = []
+for(let str of arr){
+  str = exclaim(str)
+  if(isLong(str) === false){
+    punchy.push(str)
+
+  }
 
 }
-
+return punchy
+}
 
 module.exports = {
   isEvenlyDivisible,
